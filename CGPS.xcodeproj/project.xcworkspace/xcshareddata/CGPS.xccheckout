@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0F385EDC-333D-436B-A4F2-F43DF95A2657</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CGPS</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0E6AE9E3A54B5307F0D97032F00A2155A26750E4</key>
+		<string>github.com:bignerdranch/MarkDs-Stuff.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Code/CGPS/CGPS.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0E6AE9E3A54B5307F0D97032F00A2155A26750E4</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:bignerdranch/MarkDs-Stuff.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0E6AE9E3A54B5307F0D97032F00A2155A26750E4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0E6AE9E3A54B5307F0D97032F00A2155A26750E4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MarkDs-Stuff</string>
+		</dict>
+	</array>
+</dict>
+</plist>

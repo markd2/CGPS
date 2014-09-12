@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D51A00619C3737000C70018 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D51A00519C3737000C70018 /* main.m */; };
+		7D51A00919C3737000C70018 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D51A00819C3737000C70018 /* AppDelegate.m */; };
+		7D51A00B19C3737000C70018 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D51A00A19C3737000C70018 /* Images.xcassets */; };
+		7D51A00E19C3737000C70018 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D51A00C19C3737000C70018 /* MainMenu.xib */; };
+		7D51A01A19C3737000C70018 /* CGPSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D51A01919C3737000C70018 /* CGPSTests.m */; };
+		7D51A02519C3746F00C70018 /* XXPDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D51A02419C3746F00C70018 /* XXPDFView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D51A01419C3737000C70018 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D519FF819C3737000C70018 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D519FFF19C3737000C70018;
+			remoteInfo = CGPS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7D51A00019C3737000C70018 /* CGPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D51A00419C3737000C70018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D51A00519C3737000C70018 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7D51A00719C3737000C70018 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7D51A00819C3737000C70018 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7D51A00A19C3737000C70018 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7D51A00D19C3737000C70018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7D51A01319C3737000C70018 /* CGPSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CGPSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D51A01819C3737000C70018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D51A01919C3737000C70018 /* CGPSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGPSTests.m; sourceTree = "<group>"; };
+		7D51A02319C3746F00C70018 /* XXPDFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXPDFView.h; sourceTree = "<group>"; };
+		7D51A02419C3746F00C70018 /* XXPDFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXPDFView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D519FFD19C3737000C70018 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D51A01019C3737000C70018 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D519FF719C3737000C70018 = {
+			isa = PBXGroup;
+			children = (
+				7D51A00219C3737000C70018 /* CGPS */,
+				7D51A01619C3737000C70018 /* CGPSTests */,
+				7D51A00119C3737000C70018 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D51A00119C3737000C70018 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D51A00019C3737000C70018 /* CGPS.app */,
+				7D51A01319C3737000C70018 /* CGPSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D51A00219C3737000C70018 /* CGPS */ = {
+			isa = PBXGroup;
+			children = (
+				7D51A00719C3737000C70018 /* AppDelegate.h */,
+				7D51A00819C3737000C70018 /* AppDelegate.m */,
+				7D51A02319C3746F00C70018 /* XXPDFView.h */,
+				7D51A02419C3746F00C70018 /* XXPDFView.m */,
+				7D51A00A19C3737000C70018 /* Images.xcassets */,
+				7D51A00C19C3737000C70018 /* MainMenu.xib */,
+				7D51A00319C3737000C70018 /* Supporting Files */,
+			);
+			path = CGPS;
+			sourceTree = "<group>";
+		};
+		7D51A00319C3737000C70018 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7D51A00419C3737000C70018 /* Info.plist */,
+				7D51A00519C3737000C70018 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7D51A01619C3737000C70018 /* CGPSTests */ = {
+			isa = PBXGroup;
+			children = (
+				7D51A01919C3737000C70018 /* CGPSTests.m */,
+				7D51A01719C3737000C70018 /* Supporting Files */,
+			);
+			path = CGPSTests;
+			sourceTree = "<group>";
+		};
+		7D51A01719C3737000C70018 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7D51A01819C3737000C70018 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D519FFF19C3737000C70018 /* CGPS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D51A01D19C3737000C70018 /* Build configuration list for PBXNativeTarget "CGPS" */;
+			buildPhases = (
+				7D519FFC19C3737000C70018 /* Sources */,
+				7D519FFD19C3737000C70018 /* Frameworks */,
+				7D519FFE19C3737000C70018 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CGPS;
+			productName = CGPS;
+			productReference = 7D51A00019C3737000C70018 /* CGPS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7D51A01219C3737000C70018 /* CGPSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D51A02019C3737000C70018 /* Build configuration list for PBXNativeTarget "CGPSTests" */;
+			buildPhases = (
+				7D51A00F19C3737000C70018 /* Sources */,
+				7D51A01019C3737000C70018 /* Frameworks */,
+				7D51A01119C3737000C70018 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D51A01519C3737000C70018 /* PBXTargetDependency */,
+			);
+			name = CGPSTests;
+			productName = CGPSTests;
+			productReference = 7D51A01319C3737000C70018 /* CGPSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D519FF819C3737000C70018 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Big Nerd Ranch";
+				TargetAttributes = {
+					7D519FFF19C3737000C70018 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					7D51A01219C3737000C70018 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 7D519FFF19C3737000C70018;
+					};
+				};
+			};
+			buildConfigurationList = 7D519FFB19C3737000C70018 /* Build configuration list for PBXProject "CGPS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D519FF719C3737000C70018;
+			productRefGroup = 7D51A00119C3737000C70018 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D519FFF19C3737000C70018 /* CGPS */,
+				7D51A01219C3737000C70018 /* CGPSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D519FFE19C3737000C70018 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D51A00B19C3737000C70018 /* Images.xcassets in Resources */,
+				7D51A00E19C3737000C70018 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D51A01119C3737000C70018 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D519FFC19C3737000C70018 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D51A02519C3746F00C70018 /* XXPDFView.m in Sources */,
+				7D51A00919C3737000C70018 /* AppDelegate.m in Sources */,
+				7D51A00619C3737000C70018 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D51A00F19C3737000C70018 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D51A01A19C3737000C70018 /* CGPSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D51A01519C3737000C70018 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D519FFF19C3737000C70018 /* CGPS */;
+			targetProxy = 7D51A01419C3737000C70018 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7D51A00C19C3737000C70018 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D51A00D19C3737000C70018 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D51A01B19C3737000C70018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7D51A01C19C3737000C70018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7D51A01E19C3737000C70018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CGPS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7D51A01F19C3737000C70018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CGPS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7D51A02119C3737000C70018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CGPSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CGPS.app/Contents/MacOS/CGPS";
+			};
+			name = Debug;
+		};
+		7D51A02219C3737000C70018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CGPSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CGPS.app/Contents/MacOS/CGPS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D519FFB19C3737000C70018 /* Build configuration list for PBXProject "CGPS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D51A01B19C3737000C70018 /* Debug */,
+				7D51A01C19C3737000C70018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D51A01D19C3737000C70018 /* Build configuration list for PBXNativeTarget "CGPS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D51A01E19C3737000C70018 /* Debug */,
+				7D51A01F19C3737000C70018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D51A02019C3737000C70018 /* Build configuration list for PBXNativeTarget "CGPSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D51A02119C3737000C70018 /* Debug */,
+				7D51A02219C3737000C70018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D519FF819C3737000C70018 /* Project object */;
+}
