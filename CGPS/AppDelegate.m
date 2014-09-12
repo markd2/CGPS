@@ -22,7 +22,7 @@ static NSString *ps =
 "40 scalefont\n"
 "setfont\n"
 "\n"
-"30 50 translate\n"
+"20 50 translate\n"
 "30 rotate\n"
 "2.5 1 scale\n"
 "\n"
@@ -68,8 +68,6 @@ static NSString *ps =
     bool converted = CGPSConverterConvert (converter, provider, consumer, NULL);
     
     if (converted) {
-        NSLog (@"YAY");
-    } else {
         NSLog (@"BOO");
     }
     

@@ -12,22 +12,34 @@
 	<dict>
 		<key>0E6AE9E3A54B5307F0D97032F00A2155A26750E4</key>
 		<string>github.com:bignerdranch/MarkDs-Stuff.git</string>
+		<key>55409352E182A9A4C50065D30A960D3C28D89BB0</key>
+		<string>github.com:markd2/CGPS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Code/CGPS/CGPS.xcodeproj</string>
+	<string>CGPS.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0E6AE9E3A54B5307F0D97032F00A2155A26750E4</key>
-		<string>../../../..</string>
+		<string>../../../MarkDs-Stuff</string>
+		<key>55409352E182A9A4C50065D30A960D3C28D89BB0</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>github.com:bignerdranch/MarkDs-Stuff.git</string>
+	<string>github.com:markd2/CGPS.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0E6AE9E3A54B5307F0D97032F00A2155A26750E4</string>
+	<string>55409352E182A9A4C50065D30A960D3C28D89BB0</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>55409352E182A9A4C50065D30A960D3C28D89BB0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CGPS</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
