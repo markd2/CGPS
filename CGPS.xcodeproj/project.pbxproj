@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D12F6A319C77C3600BA4C5F /* SwiftDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D12F6A219C77C3600BA4C5F /* SwiftDelegate.swift */; };
+		7D12F6A619C77F7C00BA4C5F /* PDFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D12F6A519C77F7C00BA4C5F /* PDFView.swift */; };
 		7D51A00619C3737000C70018 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D51A00519C3737000C70018 /* main.m */; };
 		7D51A00919C3737000C70018 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D51A00819C3737000C70018 /* AppDelegate.m */; };
 		7D51A00B19C3737000C70018 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D51A00A19C3737000C70018 /* Images.xcassets */; };
@@ -26,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D12F6A119C77C3600BA4C5F /* CGPS-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGPS-Bridging-Header.h"; sourceTree = "<group>"; };
+		7D12F6A219C77C3600BA4C5F /* SwiftDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDelegate.swift; sourceTree = "<group>"; };
+		7D12F6A519C77F7C00BA4C5F /* PDFView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFView.swift; sourceTree = "<group>"; };
 		7D51A00019C3737000C70018 /* CGPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D51A00419C3737000C70018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D51A00519C3737000C70018 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -58,6 +63,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D12F69F19C77C2000BA4C5F /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				7D12F6A219C77C3600BA4C5F /* SwiftDelegate.swift */,
+				7D12F6A519C77F7C00BA4C5F /* PDFView.swift */,
+				7D12F6A119C77C3600BA4C5F /* CGPS-Bridging-Header.h */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		7D12F6A419C77F5700BA4C5F /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				7D51A00719C3737000C70018 /* AppDelegate.h */,
+				7D51A00819C3737000C70018 /* AppDelegate.m */,
+				7D51A02319C3746F00C70018 /* XXPDFView.h */,
+				7D51A02419C3746F00C70018 /* XXPDFView.m */,
+			);
+			name = "Objective-C";
+			sourceTree = "<group>";
+		};
 		7D519FF719C3737000C70018 = {
 			isa = PBXGroup;
 			children = (
@@ -79,10 +105,8 @@
 		7D51A00219C3737000C70018 /* CGPS */ = {
 			isa = PBXGroup;
 			children = (
-				7D51A00719C3737000C70018 /* AppDelegate.h */,
-				7D51A00819C3737000C70018 /* AppDelegate.m */,
-				7D51A02319C3746F00C70018 /* XXPDFView.h */,
-				7D51A02419C3746F00C70018 /* XXPDFView.m */,
+				7D12F6A419C77F5700BA4C5F /* Objective-C */,
+				7D12F69F19C77C2000BA4C5F /* Swift */,
 				7D51A00A19C3737000C70018 /* Images.xcassets */,
 				7D51A00C19C3737000C70018 /* MainMenu.xib */,
 				7D51A00319C3737000C70018 /* Supporting Files */,
@@ -217,6 +241,8 @@
 			files = (
 				7D51A02519C3746F00C70018 /* XXPDFView.m in Sources */,
 				7D51A00919C3737000C70018 /* AppDelegate.m in Sources */,
+				7D12F6A319C77C3600BA4C5F /* SwiftDelegate.swift in Sources */,
+				7D12F6A619C77F7C00BA4C5F /* PDFView.swift in Sources */,
 				7D51A00619C3737000C70018 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,10 +357,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CGPS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CGPS/CGPS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -342,10 +371,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CGPS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CGPS/CGPS-Bridging-Header.h";
 			};
 			name = Release;
 		};
