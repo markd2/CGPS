@@ -803,7 +803,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
-                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="DI0-hM-PIJ" customClass="XXPDFView">
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="DI0-hM-PIJ" customClass="PDFView" customModule="CGPS" customModuleProvider="target">
                         <rect key="frame" x="268" y="20" width="399" height="403"/>
                     </customView>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fit-dZ-PdO">

@@ -36,7 +36,7 @@ let initialText = "" +
 class SwiftDelegate: NSObject {
 
     @IBOutlet var codeText : NSTextView!
-    @IBOutlet var pdfView : XXPDFView!
+    @IBOutlet var pdfView : PDFView!
     
     override func awakeFromNib() {
         self.codeText.string = initialText
@@ -58,9 +58,7 @@ class SwiftDelegate: NSObject {
         let consumer = CGDataConsumerCreateWithCFData (data)
         let converted = CGPSConverterConvert (converter, provider, consumer, nil)
         
-        if converted {
-            println("yay")
-        } else {
+        if !converted {
             println("boo")
         }
         
