@@ -67,7 +67,7 @@ static NSString *ps =
     
     bool converted = CGPSConverterConvert (converter, provider, consumer, NULL);
     
-    if (converted) {
+    if (!converted) {
         NSLog (@"BOO");
     }
     
