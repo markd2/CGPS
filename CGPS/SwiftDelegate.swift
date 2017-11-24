@@ -7,30 +7,29 @@
 //
 
 import Cocoa
-import CoreGraphics
-import Darwin
 
-let initialText = "" +
-"/ComicSansMS findfont\n" +
-"40 scalefont\n" +
-"setfont\n" +
-"\n" +
-"20 50 translate\n" +
-"30 rotate\n" +
-"2.5 1 scale\n" +
-"\n" +
-"newpath\n" +
-"0 0 moveto\n" +
-"(Swift Bork) true charpath\n" +
-"0.9 setgray\n" +
-"fill\n" +
-"\n" +
-"newpath\n" +
-"0 0 moveto\n" +
-"(Swift Bork) true charpath\n" +
-"0.3 setgray\n" +
-"1 setlinewidth\n" +
-"stroke\n"
+let initialText = """
+    /ComicSansMS findfont
+    40 scalefont
+    setfont
+
+    20 50 translate
+    30 rotate
+    2.5 1 scale
+
+    newpath
+    0 0 moveto
+    (SwiftBork) true charpath
+    0.9 setgray
+    fill
+
+    newpath
+    0 0 moveto
+    (SwiftBork) true charpath
+    0.3 setgray
+    1 setlinewidth
+    stroke
+    """
 
 
 class SwiftDelegate: NSObject {
@@ -43,38 +42,29 @@ class SwiftDelegate: NSObject {
     }
     
     @IBAction func draw(_ sender: AnyObject) {
-    
-        let callbacks = UnsafeMutablePointer<CGPSConverterCallbacks>.allocate(capacity: 1)
-        bzero(callbacks, MemoryLayout<CGPSConverterCallbacks>.size)
+        var callbacks = CGPSConverterCallbacks()
         
-        let converter = CGPSConverter (info: nil, callbacks: callbacks, options: nil)
-        let code = self.codeText.string
+        guard let converter = CGPSConverter(info: nil, callbacks: &callbacks, options: nil) else { return }
+        
+        self.codeText.string.withCString { codeCString in
+            guard let dataProvider: CGDataProvider = CGDataProvider(dataInfo: nil, 
+                                                                    data: codeCString, 
+                                                                    size: strlen(codeCString), 
+                                                                    releaseData: { (_,_,_) in }) else { return }
+            let data = NSMutableData()
+            guard let consumer = CGDataConsumer(data: data) else { return }
 
-        let codeCString = (code as NSString).utf8String
-        
-        let releaseMe: CGDataProviderReleaseDataCallback = { (info: UnsafeMutableRawPointer?, data: UnsafeRawPointer, size: Int) -> () in
-            // https://developer.apple.com/reference/coregraphics/cgdataproviderreleasedatacallback
-            // N.B. 'CGDataProviderRelease' is unavailable: Core Foundation objects are automatically memory managed
-            return
+            let converted = converter.convert (dataProvider, consumer: consumer, options: nil)
+            if !converted {
+                print("boo")
+            }
+            
+            guard let pdfDataProvider = CGDataProvider(data: data) else { return }
+            let pdf = CGPDFDocument(pdfDataProvider)
+            self.pdfView.pdfDocument = pdf
         }
-    
-        let dataProvider: CGDataProvider = CGDataProvider(dataInfo: nil, 
-            data: codeCString!, size: strlen(codeCString), releaseData: releaseMe)!
-        
-        
-        let data = NSMutableData()
-        let consumer = CGDataConsumer (data: data)
-        let converted = converter!.convert (dataProvider, consumer: consumer!, options: nil)
-        
-        if !converted {
-            print("boo")
-        }
-        
-        let pdfDataProvider = CGDataProvider(data: data)
-        let pdf = CGPDFDocument(pdfDataProvider!)
-        self.pdfView.pdfDocument = pdf
-        
-        callbacks.deallocate(capacity: 1)
     }
-    
 }
+
+
+
