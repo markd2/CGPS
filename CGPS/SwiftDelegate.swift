@@ -7,30 +7,29 @@
 //
 
 import Cocoa
-import CoreGraphics
-import Darwin
 
-let initialText = "" +
-"/ComicSansMS findfont\n" +
-"40 scalefont\n" +
-"setfont\n" +
-"\n" +
-"20 50 translate\n" +
-"30 rotate\n" +
-"2.5 1 scale\n" +
-"\n" +
-"newpath\n" +
-"0 0 moveto\n" +
-"(Swift Bork) true charpath\n" +
-"0.9 setgray\n" +
-"fill\n" +
-"\n" +
-"newpath\n" +
-"0 0 moveto\n" +
-"(Swift Bork) true charpath\n" +
-"0.3 setgray\n" +
-"1 setlinewidth\n" +
-"stroke\n"
+let initialText = """
+    /ComicSansMS findfont
+    40 scalefont
+    setfont
+
+    20 50 translate
+    30 rotate
+    2.5 1 scale
+
+    newpath
+    0 0 moveto
+    (SwiftBork) true charpath
+    0.9 setgray
+    fill
+
+    newpath
+    0 0 moveto
+    (SwiftBork) true charpath
+    0.3 setgray
+    1 setlinewidth
+    stroke
+    """
 
 
 class SwiftDelegate: NSObject {
@@ -42,31 +41,30 @@ class SwiftDelegate: NSObject {
         self.codeText.string = initialText
     }
     
-    @IBAction func draw(AnyObject) {
-    
-        let callbacks = UnsafeMutablePointer<CGPSConverterCallbacks>.alloc(1)
-        bzero(callbacks, UInt(sizeof(CGPSConverterCallbacks.self)))
+    @IBAction func draw(_ sender: AnyObject) {
+        var callbacks = CGPSConverterCallbacks()
         
-        let converter = CGPSConverterCreate (nil, callbacks, nil)
-        let code = self.codeText.string
+        guard let converter = CGPSConverter(info: nil, callbacks: &callbacks, options: nil) else { return }
+        
+        self.codeText.string.withCString { codeCString in
+            guard let dataProvider: CGDataProvider = CGDataProvider(dataInfo: nil, 
+                                                                    data: codeCString, 
+                                                                    size: strlen(codeCString), 
+                                                                    releaseData: { (_,_,_) in }) else { return }
+            let data = NSMutableData()
+            guard let consumer = CGDataConsumer(data: data) else { return }
 
-        let codeCString = (code as NSString).UTF8String
-        let provider = CGDataProviderCreateWithData (nil,
-            codeCString, strlen(codeCString), nil)
-        
-        let data = NSMutableData()
-        let consumer = CGDataConsumerCreateWithCFData (data)
-        let converted = CGPSConverterConvert (converter, provider, consumer, nil)
-        
-        if !converted {
-            println("boo")
+            let converted = converter.convert (dataProvider, consumer: consumer, options: nil)
+            if !converted {
+                print("boo")
+            }
+            
+            guard let pdfDataProvider = CGDataProvider(data: data) else { return }
+            let pdf = CGPDFDocument(pdfDataProvider)
+            self.pdfView.pdfDocument = pdf
         }
-        
-        let pdfDataProvider = CGDataProviderCreateWithCFData(data)
-        let pdf = CGPDFDocumentCreateWithProvider(pdfDataProvider)
-        self.pdfView.pdfDocument = pdf
-        
-        callbacks.dealloc(1)
     }
-    
 }
+
+
+

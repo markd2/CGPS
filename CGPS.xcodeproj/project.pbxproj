@@ -13,19 +13,8 @@
 		7D51A00919C3737000C70018 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D51A00819C3737000C70018 /* AppDelegate.m */; };
 		7D51A00B19C3737000C70018 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D51A00A19C3737000C70018 /* Images.xcassets */; };
 		7D51A00E19C3737000C70018 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D51A00C19C3737000C70018 /* MainMenu.xib */; };
-		7D51A01A19C3737000C70018 /* CGPSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D51A01919C3737000C70018 /* CGPSTests.m */; };
 		7D51A02519C3746F00C70018 /* XXPDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D51A02419C3746F00C70018 /* XXPDFView.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		7D51A01419C3737000C70018 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7D519FF819C3737000C70018 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7D519FFF19C3737000C70018;
-			remoteInfo = CGPS;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		7D12F6A119C77C3600BA4C5F /* CGPS-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGPS-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -38,22 +27,12 @@
 		7D51A00819C3737000C70018 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7D51A00A19C3737000C70018 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7D51A00D19C3737000C70018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		7D51A01319C3737000C70018 /* CGPSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CGPSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D51A01819C3737000C70018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7D51A01919C3737000C70018 /* CGPSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGPSTests.m; sourceTree = "<group>"; };
 		7D51A02319C3746F00C70018 /* XXPDFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXPDFView.h; sourceTree = "<group>"; };
 		7D51A02419C3746F00C70018 /* XXPDFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXPDFView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7D519FFD19C3737000C70018 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7D51A01019C3737000C70018 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -88,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				7D51A00219C3737000C70018 /* CGPS */,
-				7D51A01619C3737000C70018 /* CGPSTests */,
 				7D51A00119C3737000C70018 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				7D51A00019C3737000C70018 /* CGPS.app */,
-				7D51A01319C3737000C70018 /* CGPSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,23 +100,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		7D51A01619C3737000C70018 /* CGPSTests */ = {
-			isa = PBXGroup;
-			children = (
-				7D51A01919C3737000C70018 /* CGPSTests.m */,
-				7D51A01719C3737000C70018 /* Supporting Files */,
-			);
-			path = CGPSTests;
-			sourceTree = "<group>";
-		};
-		7D51A01719C3737000C70018 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				7D51A01819C3737000C70018 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,24 +120,6 @@
 			productReference = 7D51A00019C3737000C70018 /* CGPS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7D51A01219C3737000C70018 /* CGPSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7D51A02019C3737000C70018 /* Build configuration list for PBXNativeTarget "CGPSTests" */;
-			buildPhases = (
-				7D51A00F19C3737000C70018 /* Sources */,
-				7D51A01019C3737000C70018 /* Frameworks */,
-				7D51A01119C3737000C70018 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7D51A01519C3737000C70018 /* PBXTargetDependency */,
-			);
-			name = CGPSTests;
-			productName = CGPSTests;
-			productReference = 7D51A01319C3737000C70018 /* CGPSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -189,10 +131,6 @@
 				TargetAttributes = {
 					7D519FFF19C3737000C70018 = {
 						CreatedOnToolsVersion = 6.0;
-					};
-					7D51A01219C3737000C70018 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = 7D519FFF19C3737000C70018;
 					};
 				};
 			};
@@ -210,7 +148,6 @@
 			projectRoot = "";
 			targets = (
 				7D519FFF19C3737000C70018 /* CGPS */,
-				7D51A01219C3737000C70018 /* CGPSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -222,13 +159,6 @@
 			files = (
 				7D51A00B19C3737000C70018 /* Images.xcassets in Resources */,
 				7D51A00E19C3737000C70018 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7D51A01119C3737000C70018 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,23 +177,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7D51A00F19C3737000C70018 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7D51A01A19C3737000C70018 /* CGPSTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		7D51A01519C3737000C70018 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7D519FFF19C3737000C70018 /* CGPS */;
-			targetProxy = 7D51A01419C3737000C70018 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7D51A00C19C3737000C70018 /* MainMenu.xib */ = {
@@ -315,6 +229,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -350,6 +265,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -361,6 +277,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CGPS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CGPS/CGPS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -375,44 +292,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CGPS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CGPS/CGPS-Bridging-Header.h";
-			};
-			name = Release;
-		};
-		7D51A02119C3737000C70018 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CGPSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CGPS.app/Contents/MacOS/CGPS";
-			};
-			name = Debug;
-		};
-		7D51A02219C3737000C70018 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CGPSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CGPS.app/Contents/MacOS/CGPS";
 			};
 			name = Release;
 		};
@@ -433,15 +315,6 @@
 			buildConfigurations = (
 				7D51A01E19C3737000C70018 /* Debug */,
 				7D51A01F19C3737000C70018 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7D51A02019C3737000C70018 /* Build configuration list for PBXNativeTarget "CGPSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7D51A02119C3737000C70018 /* Debug */,
-				7D51A02219C3737000C70018 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
