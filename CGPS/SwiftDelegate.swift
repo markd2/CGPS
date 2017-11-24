@@ -42,31 +42,39 @@ class SwiftDelegate: NSObject {
         self.codeText.string = initialText
     }
     
-    @IBAction func draw(AnyObject) {
+    @IBAction func draw(_ sender: AnyObject) {
     
-        let callbacks = UnsafeMutablePointer<CGPSConverterCallbacks>.alloc(1)
-        bzero(callbacks, UInt(sizeof(CGPSConverterCallbacks.self)))
+        let callbacks = UnsafeMutablePointer<CGPSConverterCallbacks>.allocate(capacity: 1)
+        bzero(callbacks, MemoryLayout<CGPSConverterCallbacks>.size)
         
-        let converter = CGPSConverterCreate (nil, callbacks, nil)
+        let converter = CGPSConverter (info: nil, callbacks: callbacks, options: nil)
         let code = self.codeText.string
 
-        let codeCString = (code as NSString).UTF8String
-        let provider = CGDataProviderCreateWithData (nil,
-            codeCString, strlen(codeCString), nil)
+        let codeCString = (code as NSString).utf8String
+        
+        let releaseMe: CGDataProviderReleaseDataCallback = { (info: UnsafeMutableRawPointer?, data: UnsafeRawPointer, size: Int) -> () in
+            // https://developer.apple.com/reference/coregraphics/cgdataproviderreleasedatacallback
+            // N.B. 'CGDataProviderRelease' is unavailable: Core Foundation objects are automatically memory managed
+            return
+        }
+    
+        let dataProvider: CGDataProvider = CGDataProvider(dataInfo: nil, 
+            data: codeCString!, size: strlen(codeCString), releaseData: releaseMe)!
+        
         
         let data = NSMutableData()
-        let consumer = CGDataConsumerCreateWithCFData (data)
-        let converted = CGPSConverterConvert (converter, provider, consumer, nil)
+        let consumer = CGDataConsumer (data: data)
+        let converted = converter!.convert (dataProvider, consumer: consumer!, options: nil)
         
         if !converted {
-            println("boo")
+            print("boo")
         }
         
-        let pdfDataProvider = CGDataProviderCreateWithCFData(data)
-        let pdf = CGPDFDocumentCreateWithProvider(pdfDataProvider)
+        let pdfDataProvider = CGDataProvider(data: data)
+        let pdf = CGPDFDocument(pdfDataProvider!)
         self.pdfView.pdfDocument = pdf
         
-        callbacks.dealloc(1)
+        callbacks.deallocate(capacity: 1)
     }
     
 }

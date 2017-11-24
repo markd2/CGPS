@@ -10,40 +10,39 @@ import Cocoa
 import CoreGraphics
 
 extension NSGraphicsContext {
-    var CoreGraphicsContext: CGContextRef {
-        return unsafeBitCast(self.graphicsPort, CGContextRef.self)
+    var CoreGraphicsContext: CGContext {
+        return unsafeBitCast(self.graphicsPort, to: CGContext.self)
     }
 }
 
 
 class PDFView: NSView {
 
-    var pdfDocument : CGPDFDocumentRef? {
+    var pdfDocument : CGPDFDocument? {
         willSet {
             needsDisplay = true
         }
     }
 
-    override func drawRect(dirtyRect: NSRect) {
-        super.drawRect(dirtyRect)
+    override func draw(_ dirtyRect: NSRect) {
+        super.draw(dirtyRect)
 
-        NSColor.whiteColor().set()
-        NSRectFill(bounds)
+        NSColor.white.set()
+        bounds.fill()
         
         if let pdf = pdfDocument {
-            let page1 = CGPDFDocumentGetPage(self.pdfDocument, 1)
+            let page1 = pdf.page(at: 1)
             
             // This took an _insane_ amount of time to get working.
             // the bit cast docs say:
             //     "A brutal bit-cast of something to anything of the same size"
-            let contextPointer = NSGraphicsContext.currentContext().graphicsPort
-            let context = unsafeBitCast(contextPointer, CGContextRef.self)
-            
-            CGContextDrawPDFPage (context, page1)
+            let contextPointer = NSGraphicsContext.current?.graphicsPort
+            let context = unsafeBitCast(contextPointer, to: CGContext.self)
+            context.drawPDFPage(page1!)
         }
         
-        NSColor.blackColor().set()
-        NSFrameRect(bounds)
+        NSColor.black.set()
+        bounds.frame()
     }
 }
 
